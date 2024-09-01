@@ -9,8 +9,8 @@ export default function Header() {
             <nav className="relative container  w-full mx-auto sm:flex sm:items-center sm:justify-between px-3 lg:px-0" aria-label="Global">
                 <div className="flex items-center justify-between">
                     <Link href={route('homepage')} className="flex items-center space-x-2 text-xl font-semibold dark:text-white" aria-label="Brand">
-                        <img src="./faruqhossen.jpg" className="h-10 rounded-full" alt="" />
-                        <span className="whitespace-nowrap text-gray-400">Faruq Hossen</span>
+                        <img src="./gs-logo-slider-6.png" className="h-12 rounded-full" alt="" />
+                        <span className="whitespace-nowrap text-gray-400"> </span>
                     </Link>
                     <div className="sm:hidden">
                         <div className="inline px-2"> <Switcher /></div>
@@ -28,8 +28,10 @@ export default function Header() {
                     <div className="flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:pl-7">
 
                         <Link href={route('homepage')} className="font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500" >Home</Link>
-                        <Link href={route('skillpage')} className="font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500" >Skills</Link>
-                        <Link href={route('portfoliopage')} className="font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500" >Portfolio</Link>
+                        <Link href={route('projectpage')} className="font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500" >Projects</Link>
+                        <Link href={route('faqpage')} className="font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500" >Faq</Link>
+                        <Link href={route('reviewpage')} className="font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500" >Reviews</Link>
+                        {/* <Link href={route('portfoliopage')} className="font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500" >Portfolio</Link> */}
                         <Link href={route('servicepage')} className="font-medium text-gray-800 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500" >Service</Link>
                         <Link href={route('blogpage')} className="font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500" >Blog</Link>
                         <Link href={route('contact')} className="font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500" >Contact</Link>

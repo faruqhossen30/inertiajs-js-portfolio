@@ -4,8 +4,11 @@ use App\Http\Controllers\Auth\GoogleauthController;
 use App\Http\Controllers\BlogpageController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DataController;
+use App\Http\Controllers\FaqpageController;
+use App\Http\Controllers\FeatureProjectController;
 use App\Http\Controllers\PortfolioPageController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ReviewpageController;
 use App\Http\Controllers\ServicepageController;
 use App\Http\Controllers\SkillpageController;
 use App\Http\Controllers\User\DepositController;
@@ -33,16 +36,17 @@ Route::get('/', function () {
     ]);
 })->name('homepage');
 
-Route::get('skills', [SkillpageController::class, 'index'])->name('skillpage');
+
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
 Route::get('services', [ServicepageController::class, 'index'])->name('servicepage');
 Route::get('service/{slug}', [ServicepageController::class, 'SingleService'])->name('single.service');
-Route::get('service', [ServicepageController::class, 'index'])->name('servicepage');
 Route::get('blogs', [BlogpageController::class, 'index'])->name('blogpage');
 Route::get('blog/{slug}', [BlogpageController::class, 'singleBlog'])->name('single.blog');
-Route::get('portfolios', [PortfolioPageController::class, 'index'])->name('portfoliopage');
-Route::get('portfolio/{slug}', [PortfolioPageController::class, 'singlePortfolio'])->name('single.portfolio');
-
+// Route::get('portfolios', [PortfolioPageController::class, 'index'])->name('portfoliopage');
+// Route::get('portfolio/{slug}', [PortfolioPageController::class, 'singlePortfolio'])->name('single.portfolio');
+Route::get('projects',[FeatureProjectController::class,'FeatureProject'])->name('projectpage');
+Route::get('faqs',[FaqpageController::class,'FaqPage'])->name('faqpage');
+Route::get('reviews',[ReviewpageController::class,'ReviewPage'])->name('reviewpage');
 
 Route::get('auth/google', [GoogleauthController::class, 'redirect'])->name('google-auth');
 Route::get('auth/google/call-back', [GoogleauthController::class, 'callbackGoogle']);

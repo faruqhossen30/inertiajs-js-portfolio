@@ -4,87 +4,251 @@ import { Link } from '@inertiajs/react'
 
 export default function Footer({ auth }) {
     return (
-        <div className="dark:bg-slate-800 border-t dark:border-t-gray-700">
-            <footer className='md:hidden grid grid-cols-5 border-t dark:border-t-gray-700 border-gray-600 text-sm text-white dark:text-gray-200 white bg-white dark:bg-gray-700 inset-x-0 bottom-0 fixed pt-2'>
-                <Link href={route('homepage')} className='col-span-1 flex flex-col items-center'>
-                    <HomeIcon className="h-5 text-gray-500 dark:text-gray-400" />
-                    <span className="text-gray-800 dark:text-gray-400">Home</span>
-                </Link>
-                <Link to='/profile' className='col-span-1 flex flex-col items-center'>
-                    <WalletIcon className="h-5 text-gray-500 dark:text-gray-400" />
-                    <span className="text-gray-800 dark:text-gray-400">Wallet</span>
-                </Link>
-                <Link href={route('portfoliopage')} className='col-span-1 flex flex-col items-center'>
-                    <BanknotesIcon className="h-5 text-gray-500 dark:text-gray-400" />
-                    <span className="text-gray-800 dark:text-gray-400">Portfolios</span>
-                </Link>
-                <Link href={route('contact')} className='col-span-1 flex flex-col items-center'>
-                    <UserIcon className="h-5 text-gray-500 dark:text-gray-400" />
-                    <span className="text-gray-800 dark:text-gray-400">Contact</span>
-                </Link>
-
-                <div className="hs-dropdown relative inline-flex">
-
-                    <button id="hs-dropdown-with-icons" type="button" className="hs-dropdown-toggle pl-2 inline-flex justify-center items-center  align-middle  transition-all col-span-1 flex-col">
-                        <UserCircleIcon className="h-5 text-gray-500 dark:text-gray-400" />
-                        <span>Account</span>
-                    </button>
-
-                    <div className="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden bg-white shadow-md rounded-lg p-2 mt-2 divide-y divide-gray-200 dark:bg-gray-800 dark:border dark:border-gray-700 dark:divide-gray-700" aria-labelledby="hs-dropdown-with-icons">
-                        <div className="py-2 first:pt-0 last:pb-0">
-                            <a className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="#">
-                                <UserIcon className="h-5 text-gray-800  dark:text-gray-400" />
-                                Login
+        <section className="relative py-20 overflow-hidden">
+        <img
+            className="absolute top-0 left-0"
+            src="shttps://static.shuffle.dev/components/preview/2f808e47-944e-42cf-b821-2358251e0600/assets/public/saturn-assets/images/footers/blue-light-left.png"
+            alt=""
+        />
+        <img
+            className="absolute bottom-0 left-1/2 transform -translate-x-1/2"
+            src="https://static.shuffle.dev/components/preview/2f808e47-944e-42cf-b821-2358251e0600/assets/public/saturn-assets/images/footers/orange-light-bottom.png"
+            alt=""
+        />
+        <div className="relative container px-4 mx-auto">
+            <div className="max-w-7xl mx-auto">
+                <div className="pb-10 mb-10 border-b border-gray-100 items-center">
+                    <div className="flex flex-wrap -mx-4 items-center">
+                        <div className="w-full lg:w-1/2 px-4 mb-4 lg:mb-0">
+                            <a className="inline-block" href="#">
+                                <img
+                                    className="h-15"
+                                    src="https://static.shuffle.dev/components/preview/2f808e47-944e-42cf-b821-2358251e0600/assets/public/saturn-assets/logos/logo-saturn-dark.svg"
+                                    alt=""
+                                />
                             </a>
-                            <a className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="#">
-                                <UserIcon className="h-5 text-gray-800 dark:text-gray-400" />
-                                Register
-                            </a>
+                        </div>
+                        <div className="w-full lg:w-1/2 px-4">
+                            <div className="sm:flex -mb-4 items-center lg:justify-end">
+                                <span className="inline-block text-gray-900 mb-4 mr-8">
+                                    Ready to get collaborate?
+                                </span>
+                                <a
+                                    className="relative group inline-block w-full sm:w-auto py-3 px-5 mb-4 text-center text-sm font-semibold text-orange-50 bg-orange-900 rounded-md overflow-hidden"
+                                    href="#"
+                                >
+                                    <div className="absolute top-0 right-full w-full h-full bg-gray-900 transform group-hover:translate-x-full group-hover:scale-105 transition duration-500" />
+                                    <span className="relative">Get Started</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </footer>
-
-            <footer className="mt-auto dark:border-t-gray-700 hidden lg:block w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto">
-
-                <div className="text-center">
-                    <Link href={route('homepage')} className="flex items-center justify-center space-x-2 text-xl font-semibold dark:text-white" aria-label="Brand">
-                        <img src="./faruqhossen.jpg" className="h-10 rounded-full" alt="" />
-                        <span className="whitespace-nowrap text-gray-400">Faruq Hossen</span>
-                    </Link>
-
-.                    <div className="mt-3">
-                        <p className="text-gray-500 dark:text-neutral-500">Deal with pactisize individuals.</p>
-                        <p className="text-gray-500 dark:text-neutral-500">© Faruq Hossen © {new Date().getFullYear()}, All rights reserved.</p>
+                <div className="flex flex-wrap -mx-4 mb-18">
+                    <div className="w-full lg:w-2/5 px-4 mb-12 lg:mb-0">
+                        <div className="xs:max-w-xs">
+                            <h4 className="font-heading text-2xl font-semibold text-gray-900 mb-4">
+                                Subscribe to our newsletter
+                            </h4>
+                            <form action="">
+                                <label
+                                    className="block mb-1.5 text-sm font-semibold text-gray-900"
+                                    htmlFor=""
+                                >
+                                    Email
+                                </label>
+                                <div className="xs:flex items-center">
+                                    <div className="relative mb-4 xs:mb-0 xs:mr-4">
+                                        <span className="absolute left-0 top-1/2 ml-4 transform -translate-y-1/2">
+                                            <svg
+                                                width={24}
+                                                height={24}
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M19 4H5C4.20435 4 3.44129 4.31607 2.87868 4.87868C2.31607 5.44129 2 6.20435 2 7V17C2 17.7956 2.31607 18.5587 2.87868 19.1213C3.44129 19.6839 4.20435 20 5 20H19C19.7956 20 20.5587 19.6839 21.1213 19.1213C21.6839 18.5587 22 17.7956 22 17V7C22 6.20435 21.6839 5.44129 21.1213 4.87868C20.5587 4.31607 19.7956 4 19 4ZM18.59 6L12.71 11.88C12.617 11.9737 12.5064 12.0481 12.3846 12.0989C12.2627 12.1497 12.132 12.1758 12 12.1758C11.868 12.1758 11.7373 12.1497 11.6154 12.0989C11.4936 12.0481 11.383 11.9737 11.29 11.88L5.41 6H18.59ZM20 17C20 17.2652 19.8946 17.5196 19.7071 17.7071C19.5196 17.8946 19.2652 18 19 18H5C4.73478 18 4.48043 17.8946 4.29289 17.7071C4.10536 17.5196 4 17.2652 4 17V7.41L9.88 13.29C10.4425 13.8518 11.205 14.1674 12 14.1674C12.795 14.1674 13.5575 13.8518 14.12 13.29L20 7.41V17Z"
+                                                    fill="#80818C"
+                                                />
+                                            </svg>
+                                        </span>
+                                        <input
+                                            className="w-full p-12 pr-4 py-4 text-sm text-gray-500 placeholder-gray-400 rounded-lg bg-white border border-gray-200 outline-none"
+                                            type="email"
+                                            placeholder="pat@shuffle.dev"
+                                        />
+                                        <div
+                                            data-lastpass-icon-root=""
+                                            style={{
+                                                position: "relative !important",
+                                                height: "0px !important",
+                                                width: "0px !important",
+                                                float: "left !important"
+                                            }}
+                                        />
+                                    </div>
+                                    <button
+                                        className="flex flex-shrink-0 ml-auto xs:ml-0 items-center justify-center w-12 h-12 text-orange-50 bg-orange-900 hover:bg-gray-900 rounded-full transition duration-200"
+                                        type="submit"
+                                    >
+                                        <svg
+                                            width={24}
+                                            height={24}
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M20.3398 9.32L6.33976 2.32C5.78725 2.04501 5.16338 1.94711 4.55319 2.03965C3.94301 2.13219 3.37622 2.41067 2.93009 2.83711C2.48396 3.26356 2.18021 3.81722 2.06025 4.42261C1.94029 5.028 2.00996 5.65565 2.25976 6.22L4.65976 11.59C4.71422 11.7198 4.74226 11.8592 4.74226 12C4.74226 12.1408 4.71422 12.2802 4.65976 12.41L2.25976 17.78C2.05646 18.2367 1.97051 18.737 2.00974 19.2354C2.04896 19.7337 2.2121 20.2144 2.48434 20.6337C2.75658 21.053 3.12928 21.3976 3.56858 21.6362C4.00788 21.8748 4.49984 21.9999 4.99976 22C5.46799 21.9953 5.92925 21.886 6.34976 21.68L20.3498 14.68C20.8464 14.4302 21.2638 14.0473 21.5555 13.5741C21.8471 13.1009 22.0016 12.5559 22.0016 12C22.0016 11.4441 21.8471 10.8991 21.5555 10.4259C21.2638 9.95269 20.8464 9.56981 20.3498 9.32H20.3398ZM19.4498 12.89L5.44976 19.89C5.26592 19.9783 5.05949 20.0082 4.85815 19.9758C4.6568 19.9435 4.47017 19.8503 4.32327 19.7089C4.17638 19.5674 4.07624 19.3844 4.03629 19.1844C3.99634 18.9844 4.01849 18.777 4.09976 18.59L6.48976 13.22C6.5207 13.1483 6.54741 13.0748 6.56976 13H13.4598C13.725 13 13.9793 12.8946 14.1669 12.7071C14.3544 12.5196 14.4598 12.2652 14.4598 12C14.4598 11.7348 14.3544 11.4804 14.1669 11.2929C13.9793 11.1054 13.725 11 13.4598 11H6.56976C6.54741 10.9252 6.5207 10.8517 6.48976 10.78L4.09976 5.41C4.01849 5.22296 3.99634 5.01555 4.03629 4.81557C4.07624 4.61559 4.17638 4.4326 4.32327 4.29115C4.47017 4.14969 4.6568 4.05653 4.85815 4.02415C5.05949 3.99177 5.26592 4.02173 5.44976 4.11L19.4498 11.11C19.6136 11.1939 19.751 11.3214 19.847 11.4784C19.943 11.6355 19.9938 11.816 19.9938 12C19.9938 12.184 19.943 12.3645 19.847 12.5216C19.751 12.6786 19.6136 12.8061 19.4498 12.89V12.89Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-
-
-                    <div className="mt-3 space-x-2">
-                        <a className="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-700" href="#">
-                            <svg className="flex-shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z" />
-                            </svg>
-                        </a>
-                        <a className="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-700" href="#">
-                            <svg className="flex-shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
-                            </svg>
-                        </a>
-                        <a className="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-700" href="#">
-                            <svg className="flex-shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-                            </svg>
-                        </a>
-                        <a className="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-700" href="#">
-                            <svg className="flex-shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M3.362 10.11c0 .926-.756 1.681-1.681 1.681S0 11.036 0 10.111C0 9.186.756 8.43 1.68 8.43h1.682v1.68zm.846 0c0-.924.756-1.68 1.681-1.68s1.681.756 1.681 1.68v4.21c0 .924-.756 1.68-1.68 1.68a1.685 1.685 0 0 1-1.682-1.68v-4.21zM5.89 3.362c-.926 0-1.682-.756-1.682-1.681S4.964 0 5.89 0s1.68.756 1.68 1.68v1.682H5.89zm0 .846c.924 0 1.68.756 1.68 1.681S6.814 7.57 5.89 7.57H1.68C.757 7.57 0 6.814 0 5.89c0-.926.756-1.682 1.68-1.682h4.21zm6.749 1.682c0-.926.755-1.682 1.68-1.682.925 0 1.681.756 1.681 1.681s-.756 1.681-1.68 1.681h-1.681V5.89zm-.848 0c0 .924-.755 1.68-1.68 1.68A1.685 1.685 0 0 1 8.43 5.89V1.68C8.43.757 9.186 0 10.11 0c.926 0 1.681.756 1.681 1.68v4.21zm-1.681 6.748c.926 0 1.682.756 1.682 1.681S11.036 16 10.11 16s-1.681-.756-1.681-1.68v-1.682h1.68zm0-.847c-.924 0-1.68-.755-1.68-1.68 0-.925.756-1.681 1.68-1.681h4.21c.924 0 1.68.756 1.68 1.68 0 .926-.756 1.681-1.68 1.681h-4.21z" />
-                            </svg>
-                        </a>
+                    <div className="w-full sm:w-1/3 lg:w-1/5 px-4 mb-8 sm:mb-0">
+                        <h5 className="text-lg font-semibold text-gray-900 mb-4">Services</h5>
+                        <ul>
+                            <li className="mb-4">
+                                <a
+                                    className="inline-block text-gray-500 hover:text-gray-600"
+                                    href="#"
+                                >
+                                    Email Marketing
+                                </a>
+                            </li>
+                            <li className="mb-4">
+                                <a
+                                    className="inline-block text-gray-500 hover:text-gray-600"
+                                    href="#"
+                                >
+                                    Campaigns
+                                </a>
+                            </li>
+                            <li className="mb-4">
+                                <a
+                                    className="inline-block text-gray-500 hover:text-gray-600"
+                                    href="#"
+                                >
+                                    Branding
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    className="inline-block text-gray-500 hover:text-gray-600"
+                                    href="#"
+                                >
+                                    Offline
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-
+                    <div className="w-full sm:w-1/3 lg:w-1/5 px-4 mb-8 sm:mb-0">
+                        <h5 className="text-lg font-semibold text-gray-900 mb-3">About</h5>
+                        <ul>
+                            <li className="mb-4">
+                                <a
+                                    className="inline-block text-gray-500 hover:text-gray-600"
+                                    href="#"
+                                >
+                                    Our Story
+                                </a>
+                            </li>
+                            <li className="mb-4">
+                                <a
+                                    className="inline-block text-gray-500 hover:text-gray-600"
+                                    href="#"
+                                >
+                                    Benefits
+                                </a>
+                            </li>
+                            <li className="mb-4">
+                                <a
+                                    className="inline-block text-gray-500 hover:text-gray-600"
+                                    href="#"
+                                >
+                                    Team
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    className="inline-block text-gray-500 hover:text-gray-600"
+                                    href="#"
+                                >
+                                    Careers
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="w-full sm:w-1/3 lg:w-1/5 px-4">
+                        <h5 className="text-lg font-semibold text-gray-900 mb-4">Help</h5>
+                        <ul>
+                            <li className="mb-4">
+                                <a
+                                    className="inline-block text-gray-500 hover:text-gray-600"
+                                    href="#"
+                                >
+                                    FAQs
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    className="inline-block text-gray-500 hover:text-gray-600"
+                                    href="#"
+                                >
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-
-            </footer>
+                <div className="sm:flex items-center justify-between">
+                    <div className="sm:flex mb-6 sm:mb-0 items-center">
+                        <a
+                            className="inline-block mr-6 sm:mr-12 text-gray-900 hover:text-gray-600"
+                            href="#"
+                        >
+                            Terms &amp; Conditions
+                        </a>
+                        <a
+                            className="inline-block text-gray-900 hover:text-gray-600"
+                            href="#"
+                        >
+                            Privacy Policy
+                        </a>
+                    </div>
+                    <div className="flex items-center">
+                        <a
+                            className="inline-block mr-5 hover:bg-orange-50 rounded-md p-1"
+                            href="#"
+                        >
+                            <img src="https://static.shuffle.dev/components/preview/2f808e47-944e-42cf-b821-2358251e0600/assets/public/saturn-assets/images/footers/icon-facebook.svg" alt="" />
+                        </a>
+                        <a
+                            className="inline-block mr-5 hover:bg-orange-50 rounded-md p-1"
+                            href="#"
+                        >
+                            <img src="https://static.shuffle.dev/components/preview/2f808e47-944e-42cf-b821-2358251e0600/assets/public/saturn-assets/images/footers/icon-facebook.svg" alt="" />
+                        </a>
+                        <a
+                            className="inline-block mr-5 hover:bg-orange-50 rounded-md p-1"
+                            href="#"
+                        >
+                            <img src="https://static.shuffle.dev/components/preview/2f808e47-944e-42cf-b821-2358251e0600/assets/public/saturn-assets/images/footers/icon-youtube.svg" alt="" />
+                        </a>
+                        <a
+                            className="inline-block hover:bg-orange-50 rounded-md p-1"
+                            href="#"
+                        >
+                            <img src="https://static.shuffle.dev/components/preview/2f808e47-944e-42cf-b821-2358251e0600/assets/public/saturn-assets/images/footers/icon-linkedin.svg" alt="" />
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
     )
 }

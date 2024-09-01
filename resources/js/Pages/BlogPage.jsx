@@ -8,18 +8,82 @@ export default function BlogPage({ blogs }) {
     return (
         <AppLayout>
             <Head title="Blogs" />
-            <div className="container">
+            <div className="grid grid-cols-12 gap-5">
+
+                <div className="col-span-12 md:col-span-12">
+                    <nav className="flex py-4" aria-label="Breadcrumb">
+                        <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+                            <li className="inline-flex items-center">
+                                <a href="#" className="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
+                                    <svg className="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z" />
+                                    </svg>
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <div className="flex items-center">
+                                    <svg className="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4" />
+                                    </svg>
+                                    <a href="#" className="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white">Projects</a>
+                                </div>
+                            </li>
+                        </ol>
+                    </nav>
+                    <div className="grid grid-cols-12 gap-3">
+                        {[1, 2, 3, 4, 5, 6].map((portfolio, index) => {
+                            return <div key={index} className="col-span-6">
+                                    <div className="w-full p-8">
+                            <div className="flex flex-wrap lg:items-center -m-4">
+                                <div className="w-auto p-4">
+                                    <div className="overflow-hidden rounded-xl">
+                                        <img className="transform hover:scale-105 transition ease-in-out duration-1000" src="https://static.shuffle.dev/components/preview/238eb578-e531-4cf4-a658-a1ff13c9b896/assets/public/flaro-assets/images/blog/blog4.png" alt="" />
+                                    </div>
+                                </div>
+                                <div className="flex-1 p-4">
+                                    <div className="md:max-w-xs">
+                                        <div className="flex flex-col justify-between h-full">
+                                            <div className="mb-6">
+                                                <p className="mb-1.5 text-sm text-gray-500 font-medium uppercase tracking-px">Product</p>
+                                                <a className="inline-block hover:text-gray-800 hover:underline" href="#">
+                                                    <h3 className="text-xl font-semibold leading-normal">How life insurance helps you during financial insolvency</h3>
+                                                </a>
+                                            </div>
+                                            <div className="flex flex-wrap items-center -m-1">
+                                                <div className="w-auto p-1">
+                                                    <img src="https://static.shuffle.dev/components/preview/238eb578-e531-4cf4-a658-a1ff13c9b896/assets/public/flaro-assets/images/blog/blog-avatar2.png" alt="" />
+                                                </div>
+                                                <div className="w-auto p-1">
+                                                    <p className="text-sm font-semibold leading-relaxed">Jerome Bell</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            </div>
+                        })}
+                    </div>
+                    <div className="py-10">
+                        {/* <Pagination pagination={portfolios} links={portfolios.links} /> */}
+                    </div>
+                </div>
+            </div>
+
+            {/* <div className="container">
                 <div className=" bg-white dark:bg-slate-800 flex justify-between border-b dark:border-gray-700">
                     <div className="flex items-center  space-x-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
                             className="w-6 h-6 text-gray-800 dark:text-gray-400">
-                            <path stroke-linecap="round" stroke-linejoin="round"
+                            <path strokeLinecap="round" strokeLinejoin="round"
                                 d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
                         </svg>
 
                         <svg className="w-4 h-4 text-gray-800 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                             fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                                 d="M9.143 4H4.857A.857.857 0 0 0 4 4.857v4.286c0 .473.384.857.857.857h4.286A.857.857 0 0 0 10 9.143V4.857A.857.857 0 0 0 9.143 4Zm10 0h-4.286a.857.857 0 0 0-.857.857v4.286c0 .473.384.857.857.857h4.286A.857.857 0 0 0 20 9.143V4.857A.857.857 0 0 0 19.143 4Zm-10 10H4.857a.857.857 0 0 0-.857.857v4.286c0 .473.384.857.857.857h4.286a.857.857 0 0 0 .857-.857v-4.286A.857.857 0 0 0 9.143 14Zm10 0h-4.286a.857.857 0 0 0-.857.857v4.286c0 .473.384.857.857.857h4.286a.857.857 0 0 0 .857-.857v-4.286a.857.857 0 0 0-.857-.857Z" />
                         </svg>
 
@@ -63,7 +127,7 @@ export default function BlogPage({ blogs }) {
                     <Pagination pagination={blogs} links={blogs.links} />
                 </div>
 
-            </div>
+            </div> */}
 
         </AppLayout>
     );
