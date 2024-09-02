@@ -9,7 +9,6 @@ export default function BlogPage({ blogs }) {
         <AppLayout>
             <Head title="Blogs" />
             <div className="grid grid-cols-12 gap-5">
-
                 <div className="col-span-12 md:col-span-12">
                     <nav className="flex py-4" aria-label="Breadcrumb">
                         <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
@@ -26,13 +25,13 @@ export default function BlogPage({ blogs }) {
                                     <svg className="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4" />
                                     </svg>
-                                    <a href="#" className="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white">Projects</a>
+                                    <a href="#" className="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white">Blogs</a>
                                 </div>
                             </li>
                         </ol>
                     </nav>
                     <div className="grid grid-cols-12 gap-3">
-                        {[1, 2, 3, 4, 5, 6].map((portfolio, index) => {
+                        {blogs.data.map((blog, index) => {
                             return <div key={index} className="col-span-6">
                                     <div className="w-full p-8">
                             <div className="flex flex-wrap lg:items-center -m-4">
@@ -46,7 +45,7 @@ export default function BlogPage({ blogs }) {
                                         <div className="flex flex-col justify-between h-full">
                                             <div className="mb-6">
                                                 <p className="mb-1.5 text-sm text-gray-500 font-medium uppercase tracking-px">Product</p>
-                                                <a className="inline-block hover:text-gray-800 hover:underline" href="#">
+                                                <a href={route('single.blog',$blog.id)} className="inline-block hover:text-gray-800 hover:underline" >
                                                     <h3 className="text-xl font-semibold leading-normal">How life insurance helps you during financial insolvency</h3>
                                                 </a>
                                             </div>

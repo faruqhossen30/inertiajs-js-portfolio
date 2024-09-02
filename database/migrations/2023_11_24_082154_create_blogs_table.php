@@ -16,11 +16,13 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug')->unique();
             $table->longText('description');
+            $table->longText('short_description');
             $table->string('thumbnail')->nullable();
             $table->unsignedBigInteger('user_id')->nullable();
             $table->string('meta_title')->nullable();
             $table->string('meta_description')->nullable();
             $table->string('meta_tag')->nullable();
+            $table->boolean('status')->default(true);
             $table->timestamps();
         });
     }
