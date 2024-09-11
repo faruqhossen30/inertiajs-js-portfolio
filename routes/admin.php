@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ServiceController;
 
 use App\Http\Controllers\Admin\Blog\BlogcategoryController;
+use App\Http\Controllers\Admin\Blog\BlogController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\PackageController;
 use App\Http\Controllers\Admin\PortfolioController;
@@ -38,6 +39,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth','admin']], function (
 
     Route::resource('faq', FaqController::class);
 
+    Route::resource('blog', BlogController::class);
     Route::resource('blogcategory', BlogcategoryController::class);
     Route::resource('package', PackageController::class);
     Route::get('user/list', [UserController::class,'index'])->name('users');
